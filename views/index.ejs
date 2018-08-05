@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Q1 Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></link>
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+  <body>
+    <!-- Hidden on Mobile -->
+    <nav class="nav-mobile">
+      <div class="title-flex">
+        <span>Energy Live</span>
+        <button id="mobile-menu-button" class="mobile-menu-button" type="button">Menu</button>
+      </div>
+      <section id="hide-show-menu" class="toggle-hidden">
+        <form id="device-form-mobile" method="POST">
+          <div>
+            <label for="device-name">Enter Your Device:</label>
+            <input id="device-name" type="text" name="device-name" placeholder="eg. 'egauge8642'">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <ul id="mobile-aside">
+          <li><a href="#" class="active">Real-time</a></li>
+          <li><a href="/historical">Historical Graph</a></li>
+        </ul>
+      </section>
+    </nav>
+    <!-- ************** -->
+    <!-- Hidden on Non-mobile -->
+    <nav class="nav title-flex">
+        <span>Energy Live</span>
+        <section>
+          <form id="device-form" method="POST">
+            <label for="device-name">Enter Your Device:</label>
+            <input id="device-name" type="text" name="device-name" placeholder="eg. 'egauge8642'">
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+    </nav>
+    <!-- ************** -->
+    <div class="flex-aside-and-main">
+      <aside>
+        <ul>
+          <li><a href="/" class="active">Real-time</a></li>
+          <li><a href="/historical">Historical Graph</a></li>
+        </ul>
+      </aside>
+      <main id="main-content" class="container">
+        <div class="row">
+          <section class="six columns">
+            <div class="flex-blinker">
+              <header id="table-title" class="table-title">Loading...</header>
+              <div id="blinker"></div>
+            </div>
+            <table id="register-table" class="register-table">
+              <thead>
+                <tr>
+                  <th>Register Name</th>
+                  <th>Value</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody id="register-table-rows">
+                <!--Data From eGauge-->
+              </tbody>
+            </table>
+          </section>
+          <section id="chart-container" class="chart-container six columns hidden">
+            <canvas id="canvas-1" class="graph-canvas" height="350" width="400"></canvas>
+          </section>
+        </div> <!--end row-->
+      </main>
+    </div>
+    <footer>
+      <section>
+        <ul>
+          <li><a href="edpantzar@gmail.com">Email</a></li>
+          <li><a href="https://github.com/pantzed">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ed-pantzar-63a4174a/">LinkedIn</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+  <script src="../javascripts/power.js"></script>
+  <script src="../javascripts/mobile-nav.js"></script>
+</html>
