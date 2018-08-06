@@ -40,7 +40,7 @@
     <nav class="nav">
       <span>Energy Live</span>
       <section class="input">
-        <form id="device-form" method="POST">
+        <form id="device-form" method="GET" action="/histroical">
           <label for="device-name">Enter Your Device:</label>
           <input id="device-name" type="text" name="device-name" placeholder="eg. 'egauge8642'">
           <button type="submit">Submit</button>
@@ -66,13 +66,15 @@
               <div id="chart-header" class="chart-header">Loading...</div>
             </header>
             <div class="chart-container" style="position: relative; height:80vh;">
-                <canvas id="historical-chart" class="hidden"></canvas>
+                <canvas id="historical-chart" class="hidden">
+                  <!-- Fetch Data and Render Chart-->
+                </canvas>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="twelve columns">
-            <form id="chart-options" class="chart-options-form hidden">
+            <form id="chart-options" class="chart-options-form" method="GET" action="/historical">
               <label for="interval-number">Data Interval:</label>
               <input id="interval-number" type="number" name="interval-number" placeholder="1">
               <!-- <label for="interval-unit">Interval Unit</label> -->

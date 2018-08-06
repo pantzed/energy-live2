@@ -193,19 +193,18 @@
     getHistoricalFromEgauge(optionsObjectArray[index]);
   });
 
-  function removeHiddenClass() {
-    document.getElementById('historical-chart').classList.remove('hidden');
-    document.getElementById('chart-options').classList.remove('hidden');
-  }
+  // function removeHiddenClass() {
+  //   document.getElementById('historical-chart').classList.remove('hidden');
+  //   document.getElementById('chart-options').classList.remove('hidden');
+  // }
 
-  function updateChartIntervalAndUnits(interval, units) {
-    updateChart
-  }
+  // function updateChartIntervalAndUnits(interval, units) {
+  //   updateChart
+  // }
 
-  document.getElementById('chart-options').addEventListener('submit', function(){
-    let interval = document.getElementById('interval-number').value;
-    let units = document.getElementById('interval-unit').value;
-    
-  })
+  // document.getElementById('chart-options').addEventListener('submit', function(){
+  //   let interval = document.getElementById('interval-number').value;
+  //   let units = document.getElementById('interval-unit').value;
+  // })
 
 })();
