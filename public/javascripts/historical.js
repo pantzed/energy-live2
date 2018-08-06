@@ -6,7 +6,7 @@
   class FetchOptionsForNewGraph {
     constructor (deviceName, proxyAddr, params) {
       proxyAddr = proxyAddr || `egaug.es`;
-      params = params || {unit: "d", interval: "30"};
+      params = params || {unit: "d", interval: "20"};
       this.deviceName = deviceName;
       this.proxyAddr = proxyAddr;
       this.params = params;
@@ -62,7 +62,8 @@
     let rows = obj.group.data.r.length;
     for (let i=1; i<=rows-1; i++) {
       let date = new Date(((latestTime - (deltaTime * i))*1000));
-      intervalArray.push(`${date.getHours()}:${date.getMinutes()}`);
+      let dateArr = date.toString().split(' ');
+      intervalArray.push(`${dateArr[1]} ${dateArr[2]}`);
     }
     return intervalArray;
   }
@@ -164,7 +165,7 @@
       else {
         chart = updateChart(chart, labels, datasetArray, fetchOptions.deviceName);
       }
-      removeHiddenClass();
+      // removeHiddenClass();
     });
   }
 
