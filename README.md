@@ -47,12 +47,13 @@ Transfer-Encoding: chunked
 * CSS Framework: Skeleton
 * Javascript Libraries: [Chart.js](http://www.chartjs.org/)
 * XML to JSON parser: [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)
-* Deployment Method: Surge
+* Deployment Method: Heroku
     
 ### Feature List
 * ~~Input a specific energy meter~~
 * ~~Display numerical data in a table~~
 * ~~Bar graph showing value for each measurement point~~
+* Consolidate and refactor JavaScript files
 * Mobile friendly/Responsive design
 * Merge scripts for historical and real-time displays
 * Use local storage object for saving favorite devices
