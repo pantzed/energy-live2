@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const port = process.env.PORT || 3000;
 
-const indexRouter = require('./routes/index');
-const historicalRouter = require('./routes/historical');
+const indexRouter = require('./routes/index.js');
+const historicalRouter = require('./routes/historical.js');
 
 const app = express();
 
