@@ -15,17 +15,17 @@
 </head>
 <body>
   <body>
-    <!-- Hidden on Mobile -->
+    <!-- Hidden on Non-mobile -->
     <nav class="nav-mobile">
       <div class="title-flex">
         <span>Energy Live</span>
         <button id="mobile-menu-button" class="mobile-menu-button" type="button">Menu</button>
       </div>
       <section id="hide-show-menu" class="toggle-hidden">
-        <form id="device-form-mobile" method="POST">
+        <form id="device-form-mobile">
           <div>
             <label for="device-name">Enter Your Device:</label>
-            <input id="device-name" type="text" name="device-name" placeholder="eg. 'egauge8642'">
+            <input id="device-name-mobile" type="text" name="device-name" placeholder="eg. 'egauge8642'">
             <button type="submit">Submit</button>
           </div>
         </form>
@@ -36,11 +36,11 @@
       </section>
     </nav>
     <!-- ************** -->
-    <!-- Hidden on Non-mobile -->
+    <!-- Hidden on Mobile -->
     <nav class="nav">
       <span>Energy Live</span>
       <section class="input">
-        <form id="device-form" method="GET" action="/histroical">
+        <form id="device-form">
           <label for="device-name">Enter Your Device:</label>
           <input id="device-name" type="text" name="device-name" placeholder="eg. 'egauge8642'">
           <button type="submit">Submit</button>

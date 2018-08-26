@@ -20,6 +20,9 @@
     event.preventDefault();
     document.getElementById('chart-header').innerHTML = "Loading...";
     let deviceName = document.getElementById('device-name').value;
+    if (deviceName === undefined || deviceName === null) {
+      deviceName = document.getElementById('device-name-mobile').value;
+    }
     let newOptionsObject = new FetchOptionsForNewGraph(deviceName);
     let exists = findExistingDeviceName(newOptionsObject);
     if (exists === false) {

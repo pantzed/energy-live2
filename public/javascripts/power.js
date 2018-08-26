@@ -221,7 +221,10 @@
     timeStamp = '';
     serial = '';
     registers = '';
-    deviceName = document.getElementById('device-name').value;
+    
+    if (deviceName === undefined || deviceName === null) {
+      deviceName = document.getElementById('device-name-mobile').value;
+    }
     document.getElementById('table-title').innerHTML = `Loading...`;
   }
 
@@ -229,8 +232,20 @@
     document.getElementById('device-name').value = '';
   }
 
-  document.getElementById('device-form').addEventListener('submit', function(){
+  document.getElementById('device-form').addEventListener('submit', function(event){
+    event.preventDefault();
     document.getElementById('table-title').innerHTML = `Loading...`;
+    deviceName = document.getElementById('device-name').value;
+    clearAllOnNewSubmit();
+    clearForm();
+    removeBlinker();
+    callEgauge();
+  });
+
+  document.getElementById('device-form-mobile').addEventListener('submit', function(event){
+    event.preventDefault();
+    document.getElementById('table-title').innerHTML = `Loading...`;
+    deviceName = document.getElementById('device-name-mobile').value;
     clearAllOnNewSubmit();
     clearForm();
     removeBlinker();
