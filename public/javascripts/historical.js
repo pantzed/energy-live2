@@ -19,10 +19,7 @@
   function newFetchOptionsObject(event) {
     event.preventDefault();
     document.getElementById('chart-header').innerHTML = "Loading...";
-    let deviceName = document.getElementById('device-name').value;
-    if (deviceName === undefined || deviceName === null) {
-      deviceName = document.getElementById('device-name-mobile').value;
-    }
+    let deviceName = event.target.querySelector('input').value;
     let newOptionsObject = new FetchOptionsForNewGraph(deviceName);
     let exists = findExistingDeviceName(newOptionsObject);
     if (exists === false) {
@@ -32,7 +29,7 @@
     else {
       updateExistingObjectInArray(exists, newFetchOptionsObject);
     }
-    document.getElementById('device-name').value = '';
+    event.target.reset();
     getHistoricalFromEgauge(newOptionsObject);
   }
 
