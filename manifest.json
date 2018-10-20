@@ -1,0 +1,8 @@
+{
+  "runtime" : {
+  "majorVersion": "1"
+  },
+  "command": "node app.js",
+  "release": {},
+  "notes": "Energy Live Interface"
+}

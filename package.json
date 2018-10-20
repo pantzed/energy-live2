@@ -1,12 +1,6 @@
 {
   "name": "energy-live2",
   "version": "1.0.0",
-  "runtime" : {
-    "majorVersion": "1"
-  },
-  "command": "node app.js",
-  "release": {},
-  "notes": "Energy Live Interface",
   "private": true,
   "scripts": {
     "start": "node app.js"
