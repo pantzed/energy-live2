@@ -178,7 +178,10 @@
 
   function callEgauge() {
     fetch(`https://cors-anywhere.herokuapp.com/http://${deviceName}.${proxy}/cgi-bin/egauge?inst`, {
-      method: "GET"
+      method: "GET",
+      mode: "cors",
+      redirect: "follow",
+      referrer: "no-referrer"
     })
     .then(data => data.text())
     .then(xml => {
